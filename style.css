@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Fundo da tela em amarelo */
+body {
+    background-color: #fef9e7; 
+    color: #000000; 
+    line-height: 1.7;
+}
+
+/* Header principal */
+header {
+    background-color: #ff6b00; 
+    color: #000000; 
+    text-align: center;
+    padding: 3rem 1rem;
+    border-bottom: 6px solid #ffcc00;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+header p {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* Caixa principal */
+.container {
+    max-width: 900px;
+    margin: -30px auto 50px auto;
+    padding: 30px;
+    background-color: #ffffff; 
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ffcc00; 
+    position: relative;
+    z-index: 10;
+}
+
+/* Barra de busca */
+.search-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#search-input {
+    width: 100%;
+    max-width: 450px;
+    padding: 14px 24px;
+    border: 3px solid #ff6b00; 
+    border-radius: 50px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 600;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#search-input:focus {
+    background-color: #fffde6; 
+    box-shadow: 0 0 15px rgba(255, 107, 0, 0.4);
+}
+
+/* Cards da Home */
+.receitas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 3px solid #ffcc00; 
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    display: block;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(255, 107, 0, 0.3);
+    border-color: #ff6b00; 
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 3px solid #ffcc00;
+}
+
+.card h3 {
+    padding: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #000000;
+    text-align: center;
+    background-color: #fffde6; 
+}
+
+/* Botão de Voltar */
+.btn-voltar {
+    display: inline-block;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 3px solid #000000;
+    background-color: #ffcc00;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-voltar:hover {
+    background-color: #000000;
+    color: #ffcc00;
+}
+
+/* Páginas de Receitas Internas */
+.receita-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 4px solid #ff6b00; 
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #000000;
+    font-weight: 900;
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 4px solid #ff6b00; 
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+h3.sub-titulo-ingrediente {
+    font-size: 1.3rem;
+    color: #ff6b00; 
+    margin: 1.8rem 0 0.6rem 0;
+    font-weight: 800;
+}
+
+/* Listas de Ingredientes e Modo de Preparo */
+ul, ol {
+    margin-bottom: 2rem;
+    padding-left: 10px;
+}
+
+ul li {
+    list-style: none;
+    padding: 0.8rem;
+    border-bottom: 2px dashed #ffcc00; 
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+ul li:hover {
+    background-color: #fffde6;
+}
+
+ul li::before {
+    content: "🔸 ";
+    margin-right: 8px;
+}
+
+ol li {
+    padding: 1rem 0;
+    border-bottom: 2px solid #fcf6dc;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-left: 20px;
+}
+
+/* Efeito de Ingrediente Riscado (JavaScript) */
+ul li.checked {
+    text-decoration: line-through;
+    color: #888888;
+    background-color: #f5f5f5; 
+    border-radius: 8px;
+    opacity: 0.6;
+    border-bottom: 2px solid transparent;
+}
